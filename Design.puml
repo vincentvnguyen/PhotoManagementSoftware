@@ -1,0 +1,21 @@
+@startuml
+
+class Image {
+Object[] elementData
+size()
+}
+
+class Tag {
+Object[] elementData
+size()
+}
+
+Tag o-- TagController
+TagView o-- TagController
+Image o-- ImageController
+ImageView o-- ImageController
+ImageController o-- StageController
+TagController o-- StageController
+StageView o-- StageController
+StageController o-- Main
+@enduml

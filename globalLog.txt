@@ -1,0 +1,36 @@
+Old name: /home/vincent/Documents/group_0575/LakeLouise@LakeLouise.jpg
+New name: /home/vincent/Documents/group_0575/LakeLouise@LakeLouise@Obtained From Internet.jpg
+Date: Wed Dec 06 17:35:41 EST 2017
+
+Old name: /home/vincent/Documents/group_0575/LakeLouise@LakeLouise@Obtained From Internet.jpg
+New name: /home/vincent/Documents/group_0575/LakeLouise@LakeLouise@Obtained From Internet.jpg
+Date: Wed Dec 06 17:35:54 EST 2017
+
+Old name: /home/vincent/Documents/group_0575/LakeLouise@LakeLouise@Obtained From Internet.jpg
+New name: /home/vincent/Documents/group_0575/LakeLouise@LakeLouise@Obtained From Internet.jpg
+Date: Wed Dec 06 17:35:55 EST 2017
+
+Old name: /home/vincent/Documents/group_0575/LakeLouise@LakeLouise@Obtained From Internet.jpg
+New name: /home/vincent/Documents/group_0575/LakeLouise@LakeLouise@Obtained From Internet.jpg
+Date: Wed Dec 06 17:35:55 EST 2017
+
+Old name: /home/vincent/Documents/group_0575/LakeLouise@LakeLouise@Obtained From Internet.jpg
+New name: /home/vincent/Documents/group_0575/LakeLouise@Obtained From Internet.jpg
+Date: Wed Dec 06 17:35:59 EST 2017
+
+Old name: /home/vincent/Documents/group_0575/LakeLouise@Obtained From Internet.jpg
+New name: /home/vincent/Documents/group_0575/LakeLouise.jpg
+Date: Wed Dec 06 17:35:59 EST 2017
+
+Old name: /home/vincent/Documents/group_0575/LakeLouise.jpg
+New name: /home/vincent/Documents/group_0575/LakeLouise@NewTag.jpg
+Date: Wed Dec 06 17:36:14 EST 2017
+
+Old name: /home/vincent/Documents/group_0575/LakeLouise@NewTag.jpg
+New name: /home/vincent/Documents/group_0575/phase2/PhotoManagementSoftware/LakeLouise@NewTag@NewTag.jpg
+Date: Wed Dec 06 17:36:56 EST 2017
+
+/home/vincent/Documents/group_0575/phase2/PhotoManagementSoftware/LakeLouise@NewTag@NewTag.jpg
+/home/vincent/Documents/group_0575/LakeLouise@LakeLouise@Obtained From Internet.jpg
+Wed Dec 06 17:37:25 EST 2017
+

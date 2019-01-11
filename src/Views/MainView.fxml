@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #2B2B2B; -fx-border-image-width: 0px;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.StageController">
+   <children>
+      <HBox alignment="CENTER" layoutY="360.0" prefHeight="40.0" prefWidth="300.0" spacing="10.0" style="-fx-background-color: #CB772F;" AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="0">
+         <children>
+            <TextField fx:id="tagField" onAction="#handleAddTagPress" prefHeight="25.0" prefWidth="161.0" promptText="Enter tag name" />
+            <Button fx:id="addTagButton" mnemonicParsing="false" onAction="#handleAddTagPress" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.8;">
+                     <image>
+                        <Image url="@../Images/add.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Add tag to list" />
+               </tooltip></Button>
+            <Button fx:id="deleteTagButton" mnemonicParsing="false" onAction="#handleDeleteTagPress" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.8;">
+                     <image>
+                        <Image url="@../Images/delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Delete tag" />
+               </tooltip>
+            </Button>
+            <Button fx:id="saveTagButton" mnemonicParsing="false" onAction="#handleSaveTagPress" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.8;">
+                     <image>
+                        <Image url="@../Images/save.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Save tags" />
+               </tooltip>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </HBox>
+      <SplitPane dividerPositions="0.7" orientation="VERTICAL" style="-fx-border-width: 0; -fx-background-color: GREY;" AnchorPane.bottomAnchor="40" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" style="-fx-border-width: 0;">
+               <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #2B2B2B;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <StackPane fx:id="imageBackground" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+                           <children>
+                              <ImageView fx:id="pictureView" fitHeight="250.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/image.png" />
+                                 </image>
+                                 <StackPane.margin>
+                                    <Insets />
+                                 </StackPane.margin>
+                              </ImageView>
+                           </children>
+                        </StackPane>
+                         <HBox prefHeight="25.0" prefWidth="312.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                             <children>
+                                 <TextField fx:id="nameTextField" alignment="CENTER_RIGHT" opacity="0.5" prefHeight="27.0" prefWidth="241.0" promptText="Image Name" style="-fx-background-color: black; -fx-text-fill: WHITE; -fx-border-color: transparent;" />
+                                 <Button fx:id="saveImageButton" mnemonicParsing="false" onAction="#handleSavePictureNamePress" prefHeight="0.0" prefWidth="0.0">
+                                     <graphic>
+                                         <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                 <Image url="@../Images/saveImage.png" />
+                                             </image>
+                                         </ImageView>
+                                     </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Save image rename" />
+                                 </tooltip>
+                                 </Button>
+                              <Button fx:id="deleteImageButton" mnemonicParsing="false" onAction="#handleDeletePicturePress">
+                                 <graphic>
+                                    <ImageView fitHeight="43.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/delete-image.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Delete image" />
+                                 </tooltip>
+                              </Button>
+                              <Button fx:id="moveImageButton" mnemonicParsing="false" onAction="#handleMovePicturePress">
+                                 <graphic>
+                                    <ImageView fitHeight="35.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/move-folder.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Move image to directory" />
+                                 </tooltip>
+                              </Button>
+                             </children>
+                         </HBox>
+                        <TextField fx:id="absolutePathField" editable="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="32.0" />
+                        <Button fx:id="openContainingFolderButton" mnemonicParsing="false" onAction="#openContainingFolder" prefHeight="0.0" prefWidth="13.0" AnchorPane.rightAnchor="0.0">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/move-folder.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Open directory in native file explorer" />
+                           </tooltip>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <TitledPane animated="false" collapsible="false" prefHeight="388.0" prefWidth="300.0" text="Image Tags" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <FlowPane fx:id="tagsListForPictureField" prefHeight="350.0" prefWidth="300.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="169.0" prefWidth="400.0" style="-fx-border-width: 0;">
+               <children>
+                  <SplitPane dividerPositions="0.5991379310344828" prefHeight="163.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <TitledPane animated="false" collapsible="false" layoutX="84.0" layoutY="-44.0" text="Files" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <ListView fx:id="pictureList" onMouseClicked="#onPictureListClick" style="-fx-background-color: TRANSPARENT;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </TitledPane>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="487.0">
+                           <children>
+                              <TitledPane animated="false" collapsible="false" text="Name History" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <ListView fx:id="previousNamesList" onMouseClicked="#onNameHistoryClick" prefHeight="163.0" prefWidth="276.0" style="-fx-background-color: TRANSPARENT;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </TitledPane>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+                  <TitledPane animated="false" collapsible="false" layoutX="698.0" prefHeight="150.0" prefWidth="300.0" text="Your Tags" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ListView fx:id="tagList" focusTraversable="false" prefHeight="360.0" prefWidth="300.0" style="-fx-background-color: TRANSPARENT;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <HBox alignment="CENTER" prefHeight="40.0" prefWidth="300.0" spacing="10.0" style="-fx-background-color: LIGHTGREY;" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Button fx:id="addTagToNameButton" mnemonicParsing="false" onAction="#handleAddTagToNamePress" style="-fx-text-fill: #2A2A2A;" text="Add Selected to Image" />
+                        <Button fx:id="logButton" mnemonicParsing="false" onAction="#handleLogButtonPress" style="-fx-text-fill: #2A2A2A;" text="Log" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <ToolBar layoutX="400.0" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: AD6628;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300">
+        <items>
+          <Button fx:id="searchDirectoryButton" mnemonicParsing="false" onAction="#handleSearchDirPress" style="-fx-background-color: #CB772F; -fx-text-fill: WHITE;" text="Search Directory">
+               <tooltip>
+                  <Tooltip text="Display images in a directory" />
+               </tooltip></Button>
+            <Button fx:id="searchSubdirectoryButton" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleSearchSubPress" style="-fx-background-color: #CB772F; -fx-text-fill: WHITE;" text="Search Directory and Subdirectories">
+               <tooltip>
+                  <Tooltip text="Display images in a directory and all its subdirectories" />
+               </tooltip></Button>
+            <Button fx:id="searchPictureButton" layoutX="117.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleSearchPicturePress" style="-fx-background-color: #CB772F; -fx-text-fill: WHITE;" text="Search Image">
+               <tooltip>
+                  <Tooltip text="Display specific images from a directory" />
+               </tooltip></Button>
+        </items>
+      </ToolBar>
+   </children>
+</AnchorPane>
